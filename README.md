@@ -13,7 +13,7 @@ Solution: To increase the reliability and availability of the island's stabiliza
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Navigating to the EC2 Section within AWS and reviewing the selected region, making sure its set to N. Virginia (us-east-1): <br/>
+Navigated to the EC2 Section within AWS and reviewed the selected region, making sure its set to N. Virginia (us-east-1): <br/>
 <img src="images/Screenshot 2024-09-14 at 8.52.34 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -28,7 +28,7 @@ Lauching a new EC2 instance:
 </p>
 
 <p align="center">
-In the Name and tags section, for Name, type a name that you like, such as: webserver01. In the Application and OS images section, under Quick Start, choose Amazon Linux.
+Named this EC2 instance webserver01 & choose Amazon Linux as its operating system.
 <br/>
 <img src="images/Screenshot 2024-09-14 at 8.58.27 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
@@ -49,16 +49,16 @@ For Key pair name, choose Proceed without a key pair:
 <img src="images/Screenshot 2024-09-14 at 9.17.04 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-</p>
+</p> 
 
 <p align="center">
-For VPC, choose LabVpc.
-For Subnet, choose the subnet in the us-east-1a Availability Zone
-For Security group name, type: 
-Security-Group-Lab
-For Description, type: 
-HTTP Security Group
-For Type, choose HTTP: <br/>
+Network Settings:<br/>
+- For VPC, choose ...LabVpc.<br/>
+- For Subnet, choose the subnet in the us-east-1a Availability Zone<br/>
+- Made a new Security group and named it "Security-Group-Lab"<br/>
+- Typed "HTTP Security Group" in the description <br/>
+- Choose "HTTP" for the type to allow inbound HTTP traffic to the webserver
+<br/>
 <img src="images/Screenshot 2024-09-14 at 9.20.04 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="images/Screenshot 2024-09-14 at 9.22.51 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
@@ -74,23 +74,17 @@ In the Configure storage section, for Root volume, choose gp2 from the dropdown 
 </p>
 
 <p align="center">
-This user data script launches a web server, using port 80, to display internal information about the instance. The code block in your file is longer than what is displayed in the screenshot example.
+This user data script launches a web server, using port 80, to display internal information about the instance. I uploaded this script in the user data field to automate webserver configuration. (The screenshot of the script doesn't show its entirety).
 <br/>
 <img src="images/Screenshot 2024-09-14 at 9.31.25 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-<br />
-</p>
-
-<p align="center">
-Upload user data file to automate configuration
-<br/>
 <img src="images/Screenshot 2024-09-14 at 9.33.01 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 </p>
 
 <p align="center">
-Instance is successfully launched
+Instance is successfully launched!
 <br/>
 <img src="images/Screenshot 2024-09-14 at 9.36.20 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
@@ -98,7 +92,7 @@ Instance is successfully launched
 </p>
 
 <p align="center">
-Selected “view all instances” to view the instance i just created & copied the IPv4 DNS (ec2-54-86-74-204.compute-1.amazonaws.com) to load this:
+Selected “view all instances” to view the instance I just created & copied the IPv4 DNS (<b>ec2-54-86-74-204.compute-1.amazonaws.com</b>) to load this:
 <br/>
 <img src="images/Screenshot 2024-09-14 at 9.40.37 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="images/Screenshot 2024-09-14 at 9.40.57 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -107,7 +101,7 @@ Selected “view all instances” to view the instance i just created & copied t
 </p>
 
 <p align="center">
-Launched the 2nd instance from the one I previously made:
+Launched the 2nd instance from using an image of the one I previously made:
 <br/>
 <img src="images/Screenshot 2024-09-14 at 9.47.59 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
@@ -115,7 +109,7 @@ Launched the 2nd instance from the one I previously made:
 </p>
 
 <p align="center">
-Change the name and subnet associated with this new instance
+Only a few changes are made. I changed the name of this server to seperate it by name from the other. I changed the subnet to <b>us-east-1b</b> to give the client the availibility and reliability they were looking for by launching new webserver in the cloud.
 <br/>
 <img src="images/Screenshot 2024-09-14 at 9.48.43 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="images/Screenshot 2024-09-14 at 9.50.25 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -131,3 +125,10 @@ Completed launch of the 2nd EC2 instance and verified that it was up and running
 <br />
 <br />  
 </p>
+
+<p align="center">
+Now the Island's stabilization system is more reliable and avaible than ever before!
+<br/>
+
+
+
