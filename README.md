@@ -17,49 +17,117 @@ Navigating to the EC2 Section within AWS and reviewing the selected region, maki
 <img src="images/Screenshot 2024-09-14 at 8.52.34 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
+</p>
 
-Lauching a new EC2 instance:  <br/>
+<p align="center">
+Lauching a new EC2 instance:  
+<br/>
 <img src="images/Screenshot 2024-09-14 at 8.57.19 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-  <br/>
-  
+<br/>
+<br/>
+</p>
+
+<p align="center">
 In the Name and tags section, for Name, type a name that you like, such as: webserver01. In the Application and OS images section, under Quick Start, choose Amazon Linux.
-  <br/>
-<img src="images/Screenshot 2024-09-14 at 8.58.27 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-  <br />
-<br />
-
-Reviewing objects in the S3 bucket and renaming the text.html file to fit its function. This file contains the code for the error page, which opens whenever something goes wrong: <br/>
+<br/>
 <img src="images/Screenshot 2024-09-14 at 8.58.27 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
+</p>
 
-Ensuring that “block all public access” is set to “off” so that the static website’s visitors will be able to access the website when its launched:  <br/>
-<img src="images/Screenshot 2024-09-13 at 8.29.36 AM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Reviewing the bucket policy. <br/>
-Policy details: <br/>
-- This policy allows public access to the S3 bucket. <br/>
-- Effect says this policy will Allow access. <br/>
-- Principal defines who has access. In this case, * represents anyone. <br/>
-- Action defines what users can do to objects in the bucket. In this case, users can only retrieve data with GetObject. <br/>
-- Resource specifies that this policy applies to only this bucket. <br/>
-<img src="images/Screenshot 2024-09-13 at 8.32.53 AM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Navigated to the S3 bucket properties section to enable static website hosting:  <br/>
-<img src="images/Screenshot 2024-09-13 at 8.37.20 AM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Static website hosting is enabled:  <br/>
-<img src="images/Screenshot 2024-09-13 at 8.42.52 AM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p align="center">
+Clicked the Amazon Machine Image (AMI) dropdown menu & choose Amazon Linux 2 AMI (HVM). For Instance type I choose t2.micro: 
 <br/>
+<img src="images/Screenshot 2024-09-14 at 9.05.06 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+</p>
+
+<p align="center">
+For Key pair name, choose Proceed without a key pair: 
 <br/>
-Copy & pasted the bucket website endpoint into my internet browser to see if the website has been successfully enabled: 
-<img src="image/Screenshot 2024-09-13 at 8.45.19 AM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="images/Screenshot 2024-09-14 at 9.17.04 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+</p>
+
+<p align="center">
+For VPC, choose LabVpc.
+For Subnet, choose the subnet in the us-east-1a Availability Zone
+For Security group name, type: 
+Security-Group-Lab
+For Description, type: 
+HTTP Security Group
+For Type, choose HTTP: <br/>
+<img src="images/Screenshot 2024-09-14 at 9.20.04 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="images/Screenshot 2024-09-14 at 9.22.51 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+</p>
+
+<p align="center">
+In the Configure storage section, for Root volume, choose gp2 from the dropdown menu.
 <br/>
+<img src="images/Screenshot 2024-09-14 at 9.28.31 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+</p>
+
+<p align="center">
+This user data script launches a web server, using port 80, to display internal information about the instance. The code block in your file is longer than what is displayed in the screenshot example.
 <br/>
-Renaming the S3 object to reflect its function within website:  <br/>
-<img src="images/Screenshot 2024-09-13 at 8.48.14 AM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="images/Screenshot 2024-09-13 at 8.48.34 AM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="images/Screenshot 2024-09-14 at 9.31.25 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+</p>
+
+<p align="center">
+Upload user data file to automate configuration
 <br/>
+<img src="images/Screenshot 2024-09-14 at 9.33.01 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+</p>
+
+<p align="center">
+Instance is successfully launched
+<br/>
+<img src="images/Screenshot 2024-09-14 at 9.36.20 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+</p>
+
+<p align="center">
+Selected “view all instances” to view the instance i just created & copied the IPv4 DNS (ec2-54-86-74-204.compute-1.amazonaws.com) to load this:
+<br/>
+<img src="images/Screenshot 2024-09-14 at 9.40.37 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="images/Screenshot 2024-09-14 at 9.40.57 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+</p>
+
+<p align="center">
+Launched the 2nd instance from the one I previously made:
+<br/>
+<img src="images/Screenshot 2024-09-14 at 9.47.59 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+</p>
+
+<p align="center">
+Change the name and subnet associated with this new instance
+<br/>
+<img src="images/Screenshot 2024-09-14 at 9.48.43 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="images/Screenshot 2024-09-14 at 9.50.25 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+<p align="center">
+Completed launch of the 2nd EC2 instance and verified that it was up and running.
+<br/>
+<img src="images/Screenshot 2024-09-14 at 9.51.12 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="images/Screenshot 2024-09-14 at 9.57.18 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="images/Screenshot 2024-09-14 at 9.56.41 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />  
+</p>
