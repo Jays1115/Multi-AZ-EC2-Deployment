@@ -3,7 +3,7 @@
 <b>[Tech Portfolio Home](https://github.com/Jays1115/Jalen-Smith.git)</b>
 <b>[AWS Projects](https://github.com/Jays1115/AWS-Projects.git)</b>
 
-# Multi Availibility Zone EC2 Deployment
+# Multi Availability Zone EC2 Deployment
 
 <h2>Description</h2>
 Request: The island's stabilization system is failing and needs increased reliability and availability for its computational modules.
@@ -109,7 +109,7 @@ Launched the 2nd instance from using an image of the one I previously made:
 </p>
 
 <p align="center">
-Only a few changes are made. I changed the name of this server to seperate it by name from the other. I changed the subnet to <b>us-east-1b</b> to give the client the availibility and reliability they were looking for by launching new webserver in the cloud.
+Only a few changes are made. I changed the name of this server to seperate it by name from the other. I changed the subnet to <b>us-east-1b</b> to give the client the availability and reliability they were looking for by launching new webserver in the cloud.
 <br/>
 <img src="images/Screenshot 2024-09-14 at 9.48.43 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <img src="images/Screenshot 2024-09-14 at 9.50.25 PM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
