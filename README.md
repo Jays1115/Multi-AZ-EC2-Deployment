@@ -6,7 +6,7 @@
 # Multi Availability Zone EC2 Deployment
 
 <h2>Description</h2>
-Request: The island's stabilization system is failing and needs increased reliability and availability for its computational modules.
+Scenario: The island's stabilization system is failing and needs increased reliability and availability for its computational modules.
 <br><br>
 Solution: To increase the reliability and availability of the island's stabilization system, Amazon EC2 instances will be deployed across multiple Availability Zones, ensuring fault tolerance and minimizing downtime in case of localized failures.
 
